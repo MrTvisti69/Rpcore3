@@ -1,0 +1,34 @@
+# ============================================================
+#  RPCore - основной конфиг
+# ============================================================
+
+language:
+  # Язык по умолчанию (должен существовать файл lang/<код>.yml)
+  default: ru
+  # Определять язык новичка по языку его клиента Minecraft
+  auto-detect: true
+
+database:
+  host: 127.0.0.1
+  port: 3306
+  name: rp
+  user: rp
+  password: "change-me"
+  # Дополнительные параметры JDBC без "?", например: "sslMode=trust"
+  jdbc-params: ""
+  pool:
+    maximum-pool-size: 10
+    minimum-idle: 2
+    connection-timeout-ms: 10000
+    idle-timeout-ms: 600000
+    # Должно быть меньше wait_timeout сервера MariaDB (по умолчанию 8 часов)
+    max-lifetime-ms: 1740000
+    # 0 = выключено. Полезно при отладке утечек соединений.
+    leak-detection-ms: 0
+
+cache:
+  # Как часто сохранять изменённые данные онлайн-игроков в БД
+  autosave-seconds: 300
+
+# Подробные сообщения в консоль
+debug: false

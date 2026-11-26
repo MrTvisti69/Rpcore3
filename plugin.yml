@@ -1,0 +1,30 @@
+name: RPCore
+version: '${version}'
+main: ru.rpcore.RPCorePlugin
+api-version: '1.21'
+folia-supported: true
+description: Core of the RP project - schedulers, database, player cache, languages, API
+authors: [RPProject]
+
+# Server downloads these from Maven Central on first start
+libraries:
+  - com.zaxxer:HikariCP:6.3.0
+  - org.mariadb.jdbc:mariadb-java-client:3.5.3
+
+commands:
+  rpcore:
+    description: RPCore administration
+    usage: /<command> <reload|status|player>
+    aliases: [rpc]
+  lang:
+    description: Choose your language
+    usage: /<command> [language]
+    permission: rpcore.lang
+
+permissions:
+  rpcore.admin:
+    description: Access to /rpcore
+    default: op
+  rpcore.lang:
+    description: Access to /lang
+    default: true

@@ -1,0 +1,57 @@
+meta:
+  name: "Русский"
+
+prefix: "<gradient:#6ea8ff:#b48cff><bold>RP</bold></gradient> <dark_gray>»</dark_gray>"
+
+units:
+  day: "д"
+  hour: "ч"
+  minute: "м"
+
+general:
+  no-permission: "<prefix> <red>У вас нет прав для этого.</red>"
+  player-only: "<prefix> <red>Эта команда доступна только игрокам.</red>"
+  unknown-subcommand: "<prefix> <red>Неизвестная подкоманда. Список: <white>/rpcore</white></red>"
+  data-missing: "<prefix> <red>Ваши данные ещё не загружены. Перезайдите на сервер.</red>"
+  error: "<prefix> <red>Произошла ошибка: <white><error></white></red>"
+
+kick:
+  db-error:
+    - "<red><bold>Сервер временно недоступен</bold></red>"
+    - ""
+    - "<gray>Не удалось загрузить ваши данные. Попробуйте зайти позже.</gray>"
+  data-missing:
+    - "<red><bold>Ошибка загрузки данных</bold></red>"
+    - ""
+    - "<gray>Зайдите на сервер ещё раз.</gray>"
+
+lang:
+  current: "<prefix> <gray>Ваш язык: <white><language></white>. Доступно: <white><available></white></gray>"
+  changed: "<prefix> <green>Язык изменён на <white><language></white>.</green>"
+  unknown: "<prefix> <red>Язык <white><language></white> не найден. Доступно: <white><available></white></red>"
+
+command:
+  help:
+    - "<prefix> <white>RPCore</white> <gray>— команды:</gray>"
+    - " <aqua>/rpcore reload</aqua> <gray>— перезагрузить конфиг и языки</gray>"
+    - " <aqua>/rpcore status</aqua> <gray>— состояние БД и кеша</gray>"
+    - " <aqua>/rpcore player [ник]</aqua> <gray>— данные игрока из БД</gray>"
+  reload:
+    done: "<prefix> <green>Конфиг и языки перезагружены.</green> <gray>(настройки БД применяются только после рестарта)</gray>"
+  status:
+    info:
+      - "<prefix> <white>RPCore <version></white>"
+      - " <gray>БД:</gray> <green>работает</green> <dark_gray>(<ping> мс)</dark_gray>"
+      - " <gray>Пул:</gray> <white><active></white> активных, <white><idle></white> свободных, <white><total></white> всего, <white><waiting></white> ждут"
+      - " <gray>Кеш игроков:</gray> <white><cached></white> <dark_gray>(онлайн: <online>)</dark_gray>"
+    db-down: "<prefix> <red>БД недоступна:</red> <white><error></white>"
+  player:
+    usage: "<prefix> <gray>Использование: <white>/rpcore player [ник]</white></gray>"
+    not-found: "<prefix> <red>Игрок <white><name></white> не найден в БД.</red>"
+    info:
+      - "<prefix> <white><name></white>"
+      - " <gray>UUID:</gray> <white><uuid></white>"
+      - " <gray>Язык:</gray> <white><language></white>"
+      - " <gray>Первый вход:</gray> <white><first_join></white>"
+      - " <gray>Последний раз в сети:</gray> <white><last_seen></white>"
+      - " <gray>Наиграно:</gray> <white><playtime></white>"

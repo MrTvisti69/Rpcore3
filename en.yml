@@ -1,0 +1,57 @@
+meta:
+  name: "English"
+
+prefix: "<gradient:#6ea8ff:#b48cff><bold>RP</bold></gradient> <dark_gray>»</dark_gray>"
+
+units:
+  day: "d"
+  hour: "h"
+  minute: "m"
+
+general:
+  no-permission: "<prefix> <red>You don't have permission to do that.</red>"
+  player-only: "<prefix> <red>This command is for players only.</red>"
+  unknown-subcommand: "<prefix> <red>Unknown subcommand. See <white>/rpcore</white></red>"
+  data-missing: "<prefix> <red>Your data is not loaded yet. Please rejoin.</red>"
+  error: "<prefix> <red>An error occurred: <white><error></white></red>"
+
+kick:
+  db-error:
+    - "<red><bold>Server temporarily unavailable</bold></red>"
+    - ""
+    - "<gray>We couldn't load your data. Please try again later.</gray>"
+  data-missing:
+    - "<red><bold>Data loading error</bold></red>"
+    - ""
+    - "<gray>Please rejoin the server.</gray>"
+
+lang:
+  current: "<prefix> <gray>Your language: <white><language></white>. Available: <white><available></white></gray>"
+  changed: "<prefix> <green>Language changed to <white><language></white>.</green>"
+  unknown: "<prefix> <red>Language <white><language></white> not found. Available: <white><available></white></red>"
+
+command:
+  help:
+    - "<prefix> <white>RPCore</white> <gray>- commands:</gray>"
+    - " <aqua>/rpcore reload</aqua> <gray>- reload config and languages</gray>"
+    - " <aqua>/rpcore status</aqua> <gray>- database and cache status</gray>"
+    - " <aqua>/rpcore player [name]</aqua> <gray>- player data from the database</gray>"
+  reload:
+    done: "<prefix> <green>Config and languages reloaded.</green> <gray>(database settings need a restart)</gray>"
+  status:
+    info:
+      - "<prefix> <white>RPCore <version></white>"
+      - " <gray>Database:</gray> <green>online</green> <dark_gray>(<ping> ms)</dark_gray>"
+      - " <gray>Pool:</gray> <white><active></white> active, <white><idle></white> idle, <white><total></white> total, <white><waiting></white> waiting"
+      - " <gray>Player cache:</gray> <white><cached></white> <dark_gray>(online: <online>)</dark_gray>"
+    db-down: "<prefix> <red>Database unavailable:</red> <white><error></white>"
+  player:
+    usage: "<prefix> <gray>Usage: <white>/rpcore player [name]</white></gray>"
+    not-found: "<prefix> <red>Player <white><name></white> not found in the database.</red>"
+    info:
+      - "<prefix> <white><name></white>"
+      - " <gray>UUID:</gray> <white><uuid></white>"
+      - " <gray>Language:</gray> <white><language></white>"
+      - " <gray>First join:</gray> <white><first_join></white>"
+      - " <gray>Last seen:</gray> <white><last_seen></white>"
+      - " <gray>Playtime:</gray> <white><playtime></white>"
